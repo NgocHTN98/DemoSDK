@@ -18,7 +18,7 @@ class NavigationBarView: UIView {
     }()
     lazy var imgBack: UIImageView = {
         let img = UIImageView()
-        img.image = UIImage(named: "leftButtonBar")
+        img.image = UIImage(named: "ic_back_white", in: Bundle(for: NavigationBarView.self), compatibleWith: nil)
         img.tintColor = UIColor.white
         return img
     }()
@@ -48,7 +48,7 @@ class NavigationBarView: UIView {
     }()
     lazy var imgRight: UIImageView = {
         let i = UIImageView()
-        i.image = UIImage(named: "dots 1")
+        i.image =  UIImage(named: "ic_dots_white", in: Bundle(for: NavigationBarView.self), compatibleWith: nil)
         return i
     }()
     var delegate: NavigationBarDelegate?
@@ -145,25 +145,25 @@ class NavigationBarView: UIView {
     
     @objc func tapBack(_ sender: UITapGestureRecognizer) {
         print("go back")
-//        goBack()
+        goBack()
     }
     
-//    func goBack() {
-//        guard let vc = vcMain else { return }
-//        if !vc.isModal {
-//            vc.navigationController?.popViewController(animated: true)
-//        }
-//        else {
-//            vc.dismiss(animated: true, completion: nil)
-//        }
-//    }
+    func goBack() {
+        guard let vc = vcMain else { return }
+        if !vc.isModal {
+            vc.navigationController?.popViewController(animated: true)
+        }
+        else {
+            vc.dismiss(animated: true, completion: nil)
+        }
+    }
     
     func setGradientsBackgroundColor(_ colors: [UIColor]) {
         if colors.count > 0 {
-            if let colorFirst = colors.first, let colorLast = colors.last {
+//            if let colorFirst = colors.first, let colorLast = colors.last {
 //                let arrColor = [colorFirst.cgColor, colorLast.cgColor]
 //                self.viewBody.gradientBackground(colors: arrColor, direction: .topToBottom)
-            }
+//            }
         }
     }
     

@@ -101,12 +101,11 @@ class InternetOptionViewController: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.backgroundColor = UIColor.white.withAlphaComponent(0)
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.register(UINib(nibName: "ItemContentPackageTableViewCell", bundle: nil), forCellReuseIdentifier: "ItemContentPackageTableViewCell")
-        tableView.register(UINib(nibName: "ItemTitleContentTableViewCell", bundle: nil), forCellReuseIdentifier: "ItemTitleContentTableViewCell")
-        tableView.register(UINib(nibName: "SuggestionTableViewCell", bundle: nil), forCellReuseIdentifier: "SuggestionTableViewCell")
         
-        tableView.register(UINib(nibName: "ItemDescriptionContentTableViewCell", bundle: nil), forCellReuseIdentifier: "ItemDescriptionContentTableViewCell")
-        
+        tableView.registerCell(cellName: ItemContentPackageTableViewCell.self)
+        tableView.registerCell(cellName: ItemTitleContentTableViewCell.self)
+        tableView.registerCell(cellName: SuggestionTableViewCell.self)
+        tableView.registerCell(cellName: ItemDescriptionContentTableViewCell.self)
     }
     
     var data: [InternetOptionViewItem] = [.itemTile,

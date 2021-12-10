@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Billing Infomation View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="BillingInfomationViewController" id="Y6W-OH-hqX" customClass="BillingInfomationViewController" customModule="Hi_FPT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eii-7R-Ckq" customClass="NavigationBarView" customModule="Hi_FPT" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="208-g7-983"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8b1-aE-eFA">
+                                <rect key="frame" x="0.0" y="50" width="414" height="707.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9yD-ob-7CL">
+                                <rect key="frame" x="0.0" y="757.5" width="414" height="138.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BhQ-s2-zmp">
+                                        <rect key="frame" x="0.0" y="45.5" width="414" height="93"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="873-Xd-Ur4" customClass="ButtonMain" customModule="Hi_FPT" customModuleProvider="target">
+                                                <rect key="frame" x="22" y="22" width="370" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="31f-S8-haM"/>
+                                                </constraints>
+                                                <state key="normal" title="Thanh toán"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="873-Xd-Ur4" secondAttribute="bottom" constant="21" id="QoG-Xq-MnD"/>
+                                            <constraint firstItem="873-Xd-Ur4" firstAttribute="top" secondItem="BhQ-s2-zmp" secondAttribute="top" constant="22" id="XQc-7j-XLx"/>
+                                            <constraint firstItem="873-Xd-Ur4" firstAttribute="leading" secondItem="BhQ-s2-zmp" secondAttribute="leading" constant="22" id="gBv-sF-O6u"/>
+                                            <constraint firstAttribute="trailing" secondItem="873-Xd-Ur4" secondAttribute="trailing" constant="22" id="hS9-Wi-zOX"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhấn thanh toán, bạn đồng ý với  Điều khoản của FPT Telecom" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcD-PZ-ZrS">
+                                        <rect key="frame" x="14" y="6" width="383" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="BhQ-s2-zmp" firstAttribute="leading" secondItem="9yD-ob-7CL" secondAttribute="leading" id="2bk-H0-BOY"/>
+                                    <constraint firstItem="BhQ-s2-zmp" firstAttribute="top" relation="lessThanOrEqual" secondItem="dcD-PZ-ZrS" secondAttribute="bottom" constant="25" id="JMY-mW-5sw"/>
+                                    <constraint firstAttribute="trailing" secondItem="BhQ-s2-zmp" secondAttribute="trailing" id="KdZ-Ir-Tz4"/>
+                                    <constraint firstAttribute="trailing" secondItem="dcD-PZ-ZrS" secondAttribute="trailing" constant="17" id="Ne2-U3-Syd"/>
+                                    <constraint firstItem="dcD-PZ-ZrS" firstAttribute="top" secondItem="9yD-ob-7CL" secondAttribute="top" constant="6" id="giA-qz-IQ7"/>
+                                    <constraint firstAttribute="bottom" secondItem="BhQ-s2-zmp" secondAttribute="bottom" id="nGb-3J-0GA"/>
+                                    <constraint firstItem="BhQ-s2-zmp" firstAttribute="top" secondItem="9yD-ob-7CL" secondAttribute="top" constant="45.5" id="q8I-uQ-2e7"/>
+                                    <constraint firstItem="dcD-PZ-ZrS" firstAttribute="leading" secondItem="9yD-ob-7CL" secondAttribute="leading" constant="14" id="uHZ-5Y-Mfq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9yD-ob-7CL" firstAttribute="top" secondItem="8b1-aE-eFA" secondAttribute="bottom" id="6UJ-LN-4zO"/>
+                            <constraint firstItem="eii-7R-Ckq" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="AcC-n8-Gvq"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8b1-aE-eFA" secondAttribute="trailing" id="HmL-Vi-B4A"/>
+                            <constraint firstItem="9yD-ob-7CL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="KHJ-8u-Ndc"/>
+                            <constraint firstItem="9yD-ob-7CL" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="MSn-kL-MEr"/>
+                            <constraint firstItem="8b1-aE-eFA" firstAttribute="top" secondItem="eii-7R-Ckq" secondAttribute="bottom" id="dGx-Cx-YSj"/>
+                            <constraint firstItem="eii-7R-Ckq" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="fAU-th-Ecx"/>
+                            <constraint firstItem="8b1-aE-eFA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="hjW-B2-emi"/>
+                            <constraint firstItem="eii-7R-Ckq" firstAttribute="trailing" secondItem="5EZ-qb-Rvc" secondAttribute="trailing" id="s1l-5g-aTc"/>
+                            <constraint firstItem="9yD-ob-7CL" firstAttribute="bottom" secondItem="5EZ-qb-Rvc" secondAttribute="bottom" id="vta-OS-FBc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnPay" destination="873-Xd-Ur4" id="E6f-fc-zQV"/>
+                        <outlet property="lbPolicy" destination="dcD-PZ-ZrS" id="Keb-ad-f9f"/>
+                        <outlet property="navigationBarView" destination="eii-7R-Ckq" id="XSW-KF-YfJ"/>
+                        <outlet property="tableView" destination="8b1-aE-eFA" id="Ubc-e9-0ln"/>
+                        <outlet property="viewFooter" destination="BhQ-s2-zmp" id="smL-1P-DSv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="51.5625"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="873-Xd-Ur4">
+            <size key="intrinsicContentSize" width="78" height="30"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
