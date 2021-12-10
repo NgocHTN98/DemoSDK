@@ -25,7 +25,7 @@ class TabBarView: UIView {
     }()
     lazy var imageCombo: UIImageView = {
         let img = UIImageView()
-        img.image = UIImage(named: "person")
+        img.image = UIImage(named: "person.fill")
         img.tintColor = UIColor.white
         return img
     }()

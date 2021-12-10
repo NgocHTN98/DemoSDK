@@ -13,12 +13,12 @@
         <!--Package Internet Detail View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="PackageInternetDetailViewController" id="Y6W-OH-hqX" customClass="PackageInternetDetailViewController" customModule="Hi_FPT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PackageInternetDetailViewController" id="Y6W-OH-hqX" customClass="PackageInternetDetailViewController" customModule="DemoSDK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Go0-pL-23P" customClass="NavigationBarView" customModule="Hi_FPT" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Go0-pL-23P" customClass="NavigationBarView" customModule="DemoSDK" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44" width="414" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -28,7 +28,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QPb-tm-JsR">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="134.5"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ssc-Bv-oqJ" customClass="ShadowView" customModule="Hi_FPT" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ssc-Bv-oqJ" customClass="ShadowView" customModule="DemoSDK" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="16" width="382" height="49"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Yj-8D-qdi" userLabel="ViewTitle">
@@ -168,7 +168,7 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="FZy-lh-ATC"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="P9V-JO-Bl5"/>
                             </scrollView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wsx-1p-dJd" customClass="ShadowView" customModule="Hi_FPT" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wsx-1p-dJd" customClass="ShadowView" customModule="DemoSDK" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="803" width="414" height="93"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Asn-tg-Ew0">
@@ -249,7 +249,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="building.2" catalog="system" width="128" height="106"/>
+        <image name="building.2" catalog="system" width="32" height="32"/>
         <image name="phone.fill" catalog="system" width="128" height="114"/>
         <namedColor name="app_color">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

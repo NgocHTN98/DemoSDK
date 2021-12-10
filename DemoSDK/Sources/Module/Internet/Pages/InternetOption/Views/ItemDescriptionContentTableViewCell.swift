@@ -8,7 +8,15 @@
 import UIKit
 
 class ItemDescriptionContentTableViewCell: UITableViewCell {
-
+    //MARK: Property
+    @IBOutlet weak var lbDescription: UILabel!
+    var viewModel: ItemDescriptionContentTableViewCellModel? {
+        didSet {
+            guard let vm = viewModel else { return }
+            lbDescription.text = vm.descriptionText
+        }
+    }
+    //MARK: Function
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,5 +27,9 @@ class ItemDescriptionContentTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+  
     
+}
+struct ItemDescriptionContentTableViewCellModel {
+    let descriptionText: String?
 }

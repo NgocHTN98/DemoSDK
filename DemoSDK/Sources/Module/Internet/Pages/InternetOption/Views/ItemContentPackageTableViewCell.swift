@@ -9,15 +9,30 @@ import UIKit
 import SwiftUI
 
 class ItemContentPackageTableViewCell: UITableViewCell {
-
+    //MARK: Property
     @IBOutlet weak var viewBody: UIView!
     @IBOutlet weak var discount: UILabel!
+    @IBOutlet weak var imgPackage: UIImageView!
+    @IBOutlet weak var lbPackageName: UILabel!
+    @IBOutlet weak var lbPackagePrice: UILabel!
+    @IBOutlet weak var lbDiscount: UILabel!
+    @IBOutlet weak var lbDescription: UILabel!
+    var viewModel: ItemContentPackageTableViewCellModel? {
+        didSet {
+            guard let vm = viewModel else { return }
+            imgPackage.image = UIImage(named: vm.imgPackage ?? "")
+            lbPackageName.text = vm.titlePackage
+            lbPackagePrice.text = "\(vm.packagePrice)"
+            lbDiscount.text = "\(vm.discount)"
+            lbDescription.text = vm.description
+        }
+    }
+    //MARK: Function
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-//        self.collectionView.delegate = self
-//        self.collectionView.dataSource = self
-//        self.collectionView.register(UINib(nibName: "ItemTitleContentCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ItemTitleContentCollectionViewCell")
+        viewBody.layer.cornerRadius = 20
+        self.viewBody.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
        
      
     }
@@ -29,22 +44,10 @@ class ItemContentPackageTableViewCell: UITableViewCell {
     }
     
 }
-
-//extension ItemContentPackageTableViewCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//
-//
-//
-//        return CGSize(width: UIScreen.main.bounds.width, height: 195)
-//    }
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return 1
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        guard let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "ItemTitleContentCollectionViewCell", for: indexPath) as? ItemTitleContentCollectionViewCell else {
-//            return UICollectionViewCell()
-//        }
-//        return cell
-//    }
-//}
+struct ItemContentPackageTableViewCellModel {
+    let imgPackage: String?
+    let titlePackage: String?
+    let packagePrice: Double?
+    let discount: Double?
+    let description: String?
+}

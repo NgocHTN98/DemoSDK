@@ -101,15 +101,15 @@ class InternetOptionViewController: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.backgroundColor = UIColor.white.withAlphaComponent(0)
         tableView.rowHeight = UITableView.automaticDimension
-        
+        tableView.layer.cornerRadius = 18
+        tableView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         tableView.registerCell(cellName: ItemContentPackageTableViewCell.self)
         tableView.registerCell(cellName: ItemTitleContentTableViewCell.self)
         tableView.registerCell(cellName: SuggestionTableViewCell.self)
         tableView.registerCell(cellName: ItemDescriptionContentTableViewCell.self)
     }
     
-    var data: [InternetOptionViewItem] = [.itemTile,
-                                          .itemDescription,.itemPackage, .suggestion]
+   
 }
 
 extension InternetOptionViewController: UITableViewDelegate, UITableViewDataSource {
@@ -145,11 +145,11 @@ extension InternetOptionViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return viewModel.data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch data[indexPath.row] {
+        switch viewModel.data[indexPath.row] {
         case .itemTile:
             if let cell = self.tableView.dequeueReusableCell(withIdentifier: "ItemTitleContentTableViewCell", for: indexPath) as? ItemTitleContentTableViewCell {
                 return cell
